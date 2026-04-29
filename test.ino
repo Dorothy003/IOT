@@ -142,6 +142,7 @@ void checkTelegramForAck() {
             Serial.println("yes received");
             medicinePending = false; // This stops the nagging loop immediately
             lastProcessedUpdateId = currentUpdateId;
+            sendTelegramNotification("Acknowledged! Good job taking taking your medicine.");
           } else {
             lastProcessedUpdateId = currentUpdateId;
           }
